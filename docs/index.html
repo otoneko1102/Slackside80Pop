@@ -14,36 +14,49 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        padding: 20px;
         background-color: #f4f4f4;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
-      input {
-        font-size: 20px;
-        padding: 5px;
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        font-size: 18px;
+        padding: 10px;
         width: 80%;
-        max-width: 400px;
-        text-align: center;
+        max-width: 600px;
+        height: 100px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
       }
 
-      .preview {
+      .preview-container {
+        width: 80%;
+        max-width: 600px;
         margin-top: 20px;
+        padding: 15px;
+        border: 2px solid #333;
+        background-color: #fff;
+        min-height: 100px;
         font-family: "Slackside80Pop", monospace;
-        font-size: 40px;
+        font-size: 32px;
         white-space: pre-wrap;
         word-break: break-word;
-        display: inline-block;
-        border: 1px solid #ccc;
-        padding: 10px;
-        min-height: 50px;
-        background-color: #fff;
+        text-align: left;
       }
     </style>
   </head>
   <body>
     <h1>Slackside80Pop Font Preview</h1>
-    <input type="text" id="textInput" placeholder="ここに入力">
-    <div class="preview" id="textPreview"></div>
+    <textarea id="textInput" placeholder="ここにテキストを入力"></textarea>
+    <div class="preview-container" id="textPreview"></div>
 
     <script>
       document
