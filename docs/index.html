@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slackside80Pop Font Preview</title>
+    <style>
+      @font-face {
+        font-family: "Slackside80Pop";
+        src: url("https://raw.githubusercontent.com/otoneko1102/Slackside80Pop/main/Slackside80Pop.ttf")
+          format("truetype");
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      input {
+        font-size: 20px;
+        padding: 5px;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .preview {
+        margin-top: 20px;
+        font-family: "Slackside80Pop", monospace;
+        font-size: 40px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 10px;
+        min-height: 50px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Slackside80Pop Font Preview</h1>
+    <input type="text" id="textInput" placeholder="ここに入力">
+    <div class="preview" id="textPreview"></div>
+
+    <script>
+      document
+        .getElementById("textInput")
+        .addEventListener("input", function () {
+          document.getElementById("textPreview").textContent = this.value;
+        });
+    </script>
+  </body>
+</html>
