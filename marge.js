@@ -47,6 +47,12 @@ async function mergeFonts() {
       }
     }
 
+    aData.name = aData.name || {};
+    aData.name.fontFamily = "Slackside80Pop";
+    aData.name.fullName = "Slackside80Pop";
+    aData.name.postScriptName = "Slackside80Pop-Regular";
+    aData.name.version = "1.0.1";
+
     aData.head.checksumAdjustment = 0;
     aData.post.format = 2;
     aFont.set(aData);
